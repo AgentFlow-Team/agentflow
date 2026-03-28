@@ -1,13 +1,20 @@
 # Ignore EVERYTHING by default
 *
 
-# Only track the website folder
-!website/
-!website/**
+# Track only website files
+!index.html
+!thank-you.html
+!preview.png
 !README.md
 !.gitignore
+!emails/
+!emails/**
+!post_images/
+!post_images/**
+!products/
+!products/**
 
-# Safety: never commit these even inside website/
+# Safety: never commit these
 .env
 .env.*
 *.env
