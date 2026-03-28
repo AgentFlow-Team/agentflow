@@ -22,9 +22,9 @@ body{background:#050508;color:#fff;}
     <!-- Success Message -->
     <div class="text-center mb-16">
         <div class="text-6xl mb-6">🎉</div>
-        <h1 class="text-4xl md:text-5xl font-black mb-4">You're In!</h1>
-        <p class="text-xl text-gray-400 mb-2">Your AI Automation Starter Kit is being sent to your inbox.</p>
-        <p class="text-gray-500 mb-6">Check your email in the next 2 minutes. (Don't forget spam folder)</p>
+        <h1 class="text-4xl md:text-5xl font-black mb-4">You're In, <span id="userName">there</span>!</h1>
+        <p class="text-xl text-gray-400 mb-2">Your AI Automation Starter Kit is ready.</p>
+        <p class="text-gray-500 mb-6">Download it now — we'll also send a copy to your email.</p>
 
         <!-- Direct Download Button -->
         <a href="products/ai-starter-kit.pdf" download class="cta-btn inline-block text-center px-10 py-4 rounded-xl text-lg mb-2">
@@ -169,5 +169,12 @@ body{background:#050508;color:#fff;}
         <p class="mt-2">AgentFlow — AI agents that work while you don't</p>
     </div>
 </div>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) {
+        document.getElementById('userName').textContent = name;
+    }
+</script>
 </body>
 </html>

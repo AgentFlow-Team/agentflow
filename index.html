@@ -329,9 +329,16 @@ return function(){function t(t,s){e.load(this,s,t),this.begin()}var s=t.prototyp
                         <li>✅ Real ROI examples and case studies</li>
                         <li>✅ Getting started checklist</li>
                     </ul>
-                    <a href="#contact" class="cta-btn block text-center px-10 py-4 rounded-xl font-bold text-black text-lg">
-                        📥 Download Free PDF
-                    </a>
+                    <div id="pdf-form-container">
+                        <button onclick="document.getElementById('pdf-lead-form').classList.remove('hidden');document.getElementById('pdf-form-btn').classList.add('hidden')" id="pdf-form-btn" class="cta-btn block w-full text-center px-10 py-4 rounded-xl font-bold text-black text-lg">
+                            📥 Download Free PDF
+                        </button>
+                        <form id="pdf-lead-form" class="hidden space-y-3 mt-4" onsubmit="handlePdfSubmit(event)">
+                            <input name="name" type="text" placeholder="Your name" required class="w-full px-4 py-3 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition text-white"/>
+                            <input name="email" type="email" placeholder="Your email" required class="w-full px-4 py-3 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition text-white"/>
+                            <button type="submit" class="cta-btn w-full py-3 rounded-xl font-bold text-black">📥 Get My Free PDF</button>
+                        </form>
+                    </div>
                 </div>
                 <!-- MVP Guide -->
                 <div class="glass-green rounded-3xl p-10 text-center border-2 border-green-500 relative" data-aos="fade-up" data-aos-delay="150">
@@ -538,15 +545,16 @@ return function(){function t(t,s){e.load(this,s,t),this.begin()}var s=t.prototyp
                         <input name="email" type="email" placeholder="Your email" required class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition"/>
                     </div>
                     <input name="business" type="text" placeholder="What does your business do?" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition"/>
-                    <select name="plan" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition text-gray-300">
+                    <select id="planSelect" name="plan" onchange="updateSubmitBtn()" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition text-gray-300">
                         <option value="">Which plan are you interested in?</option>
+                        <option value="free-pdf">📥 I want the free PDF</option>
                         <option value="starter">Starter — $999 setup + $297/mo</option>
                         <option value="pro">Pro — $2,499 setup + $497/mo ⭐ Most popular</option>
                         <option value="enterprise">Enterprise — $5,000+ setup</option>
                         <option value="demo">I just want to see a demo</option>
                     </select>
                     <textarea name="message" placeholder="Tell us about your business — what processes do you want to automate? What are your biggest pain points?" rows="4" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition resize-none"></textarea>
-                    <button type="submit" class="cta-btn w-full py-5 rounded-xl font-bold text-black text-lg">
+                    <button id="submitBtn" type="submit" class="cta-btn w-full py-5 rounded-xl font-bold text-black text-lg">
                         ⚡ I Want My AI Agent Now
                     </button>
                 </form>
@@ -571,6 +579,7 @@ return function(){function t(t,s){e.load(this,s,t),this.begin()}var s=t.prototyp
 
 
 <script>
+    // --- Init libraries ---
     AOS.init({ duration: 800, once: true, offset: 50 });
 
     if (document.getElementById('typed-hero')) {
@@ -593,6 +602,40 @@ return function(){function t(t,s){e.load(this,s,t),this.begin()}var s=t.prototyp
             interactivity: { events: { onHover: { enable: true, mode: "repulse" } } },
             detectRetina: true
         });
+    }
+
+    // --- Form logic ---
+    function updateSubmitBtn() {
+        const plan = document.getElementById('planSelect').value;
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = (plan === 'free-pdf') ? '📥 Get My Free PDF' : '⚡ I Want My AI Agent Now';
+    }
+
+    function handlePdfSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.querySelector('[name="name"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        logLead({ name, email, plan: 'free-pdf', source: 'pdf-card' });
+        window.location.href = 'thank-you.html?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(name);
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.querySelector('[name="name"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        const business = form.querySelector('[name="business"]').value;
+        const plan = form.querySelector('[name="plan"]').value;
+        const message = form.querySelector('[name="message"]').value;
+        logLead({ name, email, business, plan, message });
+        window.location.href = 'thank-you.html?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(name) + '&plan=' + encodeURIComponent(plan);
+    });
+
+    function logLead(data) {
+        data.timestamp = new Date().toISOString();
+        console.log('NEW LEAD:', data);
+        localStorage.setItem('lastLead', JSON.stringify(data));
     }
 </script>
 
