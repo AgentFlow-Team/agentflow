@@ -15,17 +15,12 @@
     <meta name="twitter:description" content="AI agents that work 24/7 to sell, support, and grow your business. Setup in 24-48h.">
     <meta name="twitter:image" content="https://agentflow-team.github.io/agentflow/preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         *{font-family:'Inter',sans-serif;box-sizing:border-box;}
         html{scroll-behavior:smooth;}
         body{background:#050508;color:#fff;overflow-x:hidden;}
-        #tsparticles{position:fixed;inset:0;z-index:0;pointer-events:none;}
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
         @keyframes glow{0%,100%{box-shadow:0 0 30px rgba(0,255,136,.35)}50%{box-shadow:0 0 70px rgba(0,255,136,.7)}}
         @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
@@ -64,9 +59,6 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- PARTICLES -->
-    <div id="tsparticles"></div>
-
     <!-- URGENCY BAR -->
     <div id="urgency-bar" class="fixed top-0 w-full z-[100] bg-black border-b border-green-500/30 py-2 px-4 text-center text-sm">
         <span class="text-yellow-400 font-bold badge-live">🔥 FOUNDER DEAL:</span>
@@ -94,22 +86,22 @@
         <div class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent pointer-events-none"></div>
         <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-green-400 text-sm mb-8" data-aos="fade-down">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-green-400 text-sm mb-8">
                 <span class="badge-live">🚀</span>
                 <span>Powered by OpenClaw — The Future of AI</span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
                 Hire Your AI Team<br>
                 <span class="gradient-text">starting at $999</span>
             </h1>
-            <p class="text-xl text-gray-400 mb-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-xl text-gray-400 mb-4 max-w-2xl mx-auto">
                 Stop doing repetitive tasks. Your AI agents work
-                <span id="typed-hero" class="text-green-400 font-semibold"></span>
+                <span id="typed-hero" class="text-green-400 font-semibold">selling 24/7</span>
             </p>
-            <p class="text-gray-500 mb-8" data-aos="fade-up" data-aos-delay="250">
+            <p class="text-gray-500 mb-8">
                 <span class="stars">★★★★★</span> <span class="text-gray-400">Over 50 businesses already automate with AgentFlow</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <a href="#contact" class="cta-btn px-10 py-5 rounded-xl font-bold text-black text-lg">
                     ⚡ Get My AI Agent Now
                 </a>
@@ -117,14 +109,14 @@
                     See How It Works
                 </a>
             </div>
-            <p class="text-gray-500 text-sm" data-aos="fade-up" data-aos-delay="350">
+            <p class="text-gray-500 text-sm">
                 🔒 No credit card for the trial • Cancel anytime
             </p>
         </div>
     </section>
 
     <!-- STATS -->
-    <section class="py-16 px-6 border-y border-gray-800/50" data-aos="fade-up">
+    <section class="py-16 px-6 border-y border-gray-800/50">
         <div class="max-w-4xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -150,35 +142,35 @@
     <!-- FEATURES -->
     <section id="features" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">What Your AI Agent Can Do</h2>
-            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Powered by OpenClaw's advanced automation engine</p>
+            <h2 class="text-4xl font-bold text-center mb-4">What Your AI Agent Can Do</h2>
+            <p class="text-center text-gray-400 mb-16">Powered by OpenClaw's advanced automation engine</p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">🧠</div>
                     <h3 class="text-xl font-bold mb-2">Sales Agent</h3>
                     <p class="text-gray-400 text-sm">Qualifies leads, handles objections, schedules demos, and closes deals — while you sleep. Like having a $10K/mo sales team — at a fraction of the cost.</p>
                 </div>
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">🤖</div>
                     <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
                     <p class="text-gray-400 text-sm">Instant responses to your customers. Never miss a support ticket. Multilingual support included out of the box.</p>
                 </div>
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">📧</div>
                     <h3 class="text-xl font-bold mb-2">Email Agent</h3>
                     <p class="text-gray-400 text-sm">Replies, classifies, and manages your inbox automatically. Follow-up sequences that convert cold leads into customers.</p>
                 </div>
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">📱</div>
                     <h3 class="text-xl font-bold mb-2">Social Media</h3>
                     <p class="text-gray-400 text-sm">Publish content, reply to comments and DMs. Keep your presence active without touching your phone.</p>
                 </div>
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">📊</div>
                     <h3 class="text-xl font-bold mb-2">AI Analytics</h3>
                     <p class="text-gray-400 text-sm">Automatic reports on key metrics. Know exactly what works and what doesn't — without checking dashboards.</p>
                 </div>
-                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-card glass rounded-2xl p-8">
                     <div class="text-4xl mb-4">⚙️</div>
                     <h3 class="text-xl font-bold mb-2">Custom Agent</h3>
                     <p class="text-gray-400 text-sm">Have a specific process? We'll automate it. Integration with your existing tools in 24-48h.</p>
@@ -190,23 +182,23 @@
     <!-- HOW IT WORKS -->
     <section class="py-24 px-6 bg-black/30">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get Started in 3 Steps</h2>
+            <h2 class="text-4xl font-bold text-center mb-16">Get Started in 3 Steps</h2>
             <div class="space-y-6">
-                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="0">
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center">
                     <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">1</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2">Choose Your Agent Type</h3>
                         <p class="text-gray-400">Sales, Support, Email, Social Media — or combine multiple agents for maximum automation.</p>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="150">
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center">
                     <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">2</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2">We Configure It with OpenClaw</h3>
                         <p class="text-gray-400">Your custom agent ready in 24-48h with knowledge of your business, products, and processes.</p>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="300">
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center">
                     <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">3</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2">Start Earning More</h3>
@@ -220,10 +212,10 @@
     <!-- TESTIMONIALS -->
     <section id="results" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">What Our Clients Say</h2>
-            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Real results from real businesses</p>
+            <h2 class="text-4xl font-bold text-center mb-4">What Our Clients Say</h2>
+            <p class="text-center text-gray-400 mb-16">Real results from real businesses</p>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card glass rounded-2xl p-8">
                     <div class="stars text-lg mb-4">★★★★★</div>
                     <p class="text-gray-300 text-sm mb-6">"Our sales agent closed 3 clients the first weekend, without me touching the phone. The ROI was immediate."</p>
                     <div class="flex items-center gap-3">
@@ -234,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="150">
+                <div class="testimonial-card glass rounded-2xl p-8">
                     <div class="stars text-lg mb-4">★★★★★</div>
                     <p class="text-gray-300 text-sm mb-6">"24/7 support reduced our complaints by 73%. Customers are happy and I don't have to be available at 2am."</p>
                     <div class="flex items-center gap-3">
@@ -245,7 +237,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-card glass rounded-2xl p-8">
                     <div class="stars text-lg mb-4">★★★★★</div>
                     <p class="text-gray-300 text-sm mb-6">"I went from answering 200 emails a day to zero. The agent does it all. Now I have time for what matters: growing the business."</p>
                     <div class="flex items-center gap-3">
@@ -263,21 +255,21 @@
     <!-- VALUE STACK -->
     <section class="py-16 px-6 bg-black/40">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why Choose AgentFlow?</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose AgentFlow?</h2>
             <div class="space-y-4">
-                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="0">
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center">
                     <div class="text-3xl">💰</div>
                     <div><h3 class="font-bold text-lg">80% Cheaper</h3><p class="text-gray-400 text-sm">Why pay $500+/mo for basic bots? We deliver more for less.</p></div>
                 </div>
-                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="100">
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center">
                     <div class="text-3xl">🧠</div>
                     <div><h3 class="font-bold text-lg">Truly Intelligent AI</h3><p class="text-gray-400 text-sm">OpenClaw uses advanced models that understand context and close sales.</p></div>
                 </div>
-                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="200">
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center">
                     <div class="text-3xl">🔄</div>
                     <div><h3 class="font-bold text-lg">Always Improving</h3><p class="text-gray-400 text-sm">Your agents learn with every conversation. More use = better results.</p></div>
                 </div>
-                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="300">
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center">
                     <div class="text-3xl">🔒</div>
                     <div><h3 class="font-bold text-lg">30-Day Guarantee</h3><p class="text-gray-400 text-sm">If you're not satisfied within 30 days, we'll refund your money. No questions asked.</p></div>
                 </div>
@@ -289,13 +281,13 @@
     <!-- DIGITAL PRODUCTS -->
     <section class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
+            <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4">📚 AI Automation Resources</h2>
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto">Start learning how AI agents can transform your business — before committing to a plan.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Free Lead Magnet -->
-                <div class="glass-green rounded-3xl p-10 text-center" data-aos="fade-up" data-aos-delay="0">
+                <div class="glass-green rounded-3xl p-10 text-center">
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-sm mb-6">
                         <span>🎁</span>
                         <span>100% Free</span>
@@ -313,7 +305,7 @@
                     </a>
                 </div>
                 <!-- MVP Guide -->
-                <div class="glass-green rounded-3xl p-10 text-center border-2 border-green-500 relative" data-aos="fade-up" data-aos-delay="150">
+                <div class="glass-green rounded-3xl p-10 text-center border-2 border-green-500 relative">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-cyan-500 text-black px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
                         ⭐ BEST VALUE
                     </div>
@@ -342,7 +334,7 @@
     <!-- PRICING -->
     <section id="pricing" class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Simple & Transparent Pricing</h2>
                 <p class="text-gray-400">No hidden fees. No surprises. Just results.</p>
                 <div class="mt-6 inline-flex items-center gap-3 glass px-6 py-3 rounded-full">
@@ -352,7 +344,7 @@
                 </div>
             </div>
             <!-- Scarcity bar -->
-            <div class="max-w-md mx-auto mb-12" data-aos="fade-up">
+            <div class="max-w-md mx-auto mb-12">
                 <div class="flex justify-between text-sm text-gray-400 mb-2">
                     <span>3 of 10 spots taken</span>
                     <span class="text-green-400 font-bold">7 left</span>
@@ -363,7 +355,7 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6 relative">
                 <!-- Starter -->
-                <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="0">
+                <div class="glass rounded-3xl p-8">
                     <h3 class="text-xl font-bold mb-2">Starter</h3>
                     <p class="text-gray-500 text-sm mb-4">Get your first AI agent live</p>
                     <div class="mb-6">
@@ -386,7 +378,7 @@
                     </a>
                 </div>
                 <!-- Pro -->
-                <div class="glass rounded-3xl p-8 border-2 border-green-500 relative transform scale-105 z-10" data-aos="fade-up" data-aos-delay="150">
+                <div class="glass rounded-3xl p-8 border-2 border-green-500 relative transform scale-105 z-10">
                     <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-cyan-500 text-black px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
                         ⭐ MOST POPULAR
                     </div>
@@ -413,7 +405,7 @@
                     </a>
                 </div>
                 <!-- Agency -->
-                <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass rounded-3xl p-8">
                     <h3 class="text-xl font-bold mb-2">Enterprise</h3>
                     <p class="text-gray-500 text-sm mb-4">Full-scale AI transformation</p>
                     <div class="mb-6">
@@ -441,7 +433,7 @@
     </section>
 
     <!-- GUARANTEE -->
-    <section class="py-16 px-6 text-center" data-aos="zoom-in">
+    <section class="py-16 px-6 text-center">
         <div class="max-w-lg mx-auto">
             <div class="guarantee-ring inline-block mb-6">
                 <div class="text-5xl">🛡️</div>
@@ -454,9 +446,9 @@
     <!-- FAQ -->
     <section id="faq" class="py-24 px-6 bg-black/30">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">❓ Frequently Asked Questions</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">❓ Frequently Asked Questions</h2>
             <div class="space-y-4">
-                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                <div class="acc-item glass rounded-xl overflow-hidden">
                     <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
                         <span class="font-semibold">What is OpenClaw?</span>
                         <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
@@ -465,7 +457,7 @@
                         OpenClaw is a next-generation AI automation platform that powers intelligent agents. It's what makes our agents much smarter than basic chatbots. It uses advanced AI models that understand context and can take real actions.
                     </div>
                 </div>
-                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="acc-item glass rounded-xl overflow-hidden">
                     <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
                         <span class="font-semibold">How long does setup take?</span>
                         <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
@@ -474,7 +466,7 @@
                         Typically 24-48 hours. We configure your agent with your business knowledge and integrate it with your existing tools. You'll be up and running in less than 2 days.
                     </div>
                 </div>
-                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="acc-item glass rounded-xl overflow-hidden">
                     <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
                         <span class="font-semibold">Can I cancel anytime?</span>
                         <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
@@ -483,7 +475,7 @@
                         Yes! No long-term contracts. Cancel anytime with 1 click. But we think you'll love it — 95% of our customers continue after day 30.
                     </div>
                 </div>
-                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <div class="acc-item glass rounded-xl overflow-hidden">
                     <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
                         <span class="font-semibold">What integrations are available?</span>
                         <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
@@ -492,7 +484,7 @@
                         Stripe, Slack, WhatsApp, Telegram, Email (Gmail, Outlook), CRM (HubSpot, Salesforce), Calendar (Google, Cal.com) and 50+ more. Ask us if you need something specific!
                     </div>
                 </div>
-                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                <div class="acc-item glass rounded-xl overflow-hidden">
                     <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
                         <span class="font-semibold">Do I need technical knowledge?</span>
                         <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
@@ -508,7 +500,7 @@
     <!-- CONTACT -->
     <section id="contact" class="py-24 px-6">
         <div class="max-w-2xl mx-auto">
-            <div class="glass-green rounded-3xl p-10" data-aos="fade-up">
+            <div class="glass-green rounded-3xl p-10">
                 <h2 class="text-3xl font-bold text-center mb-2">🚀 Get Started Today</h2>
                 <p class="text-center text-gray-400 mb-8">Tell us about your business and we'll contact you in less than 2 hours</p>
                 <form id="contactForm" class="space-y-4">
@@ -549,10 +541,7 @@
 
 
 <script>
-    // Initialize AOS animations
-    AOS.init({ duration: 800, once: true, offset: 50 });
-
-    // Initialize Typed.js
+    // Typed.js hero animation
     if (document.getElementById('typed-hero')) {
         new Typed('#typed-hero', {
             strings: ['selling 24/7', 'supporting customers', 'booking appointments', 'closing deals while you sleep'],
@@ -560,22 +549,6 @@
             backSpeed: 30,
             backDelay: 2000,
             loop: true
-        });
-    }
-
-    // Initialize tsParticles background
-    if (typeof tsParticles !== 'undefined') {
-        tsParticles.load("tsparticles", {
-            fpsLimit: 60,
-            particles: {
-                number: { value: 40, density: { enable: true, area: 1200 } },
-                color: { value: "#00ff88" },
-                opacity: { value: 0.15 },
-                size: { value: { min: 1, max: 3 } },
-                move: { enable: true, speed: 0.5, direction: "none", outModes: "out" }
-            },
-            interactivity: { events: { onHover: { enable: true, mode: "repulse" } } },
-            detectRetina: true
         });
     }
 </script>
