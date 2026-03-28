@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+  .container { max-width: 600px; margin: 0 auto; background: #0a0a0f; border-radius: 12px; overflow: hidden; }
+  .header { background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); padding: 40px 30px; text-align: center; }
+  .logo { color: #00ff88; font-size: 28px; font-weight: bold; letter-spacing: 2px; }
+  .tagline { color: #888; font-size: 14px; margin-top: 8px; }
+  .content { padding: 30px; color: #e0e0e0; }
+  .greeting { font-size: 18px; color: #fff; margin-bottom: 20px; }
+  .body-text { font-size: 15px; line-height: 1.7; color: #ccc; }
+  .highlight { color: #00ff88; font-weight: bold; }
+  .stat-box { background: #1a1a2e; border-left: 3px solid #00ff88; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .stat-number { font-size: 32px; font-weight: bold; color: #00ff88; }
+  .stat-text { font-size: 14px; color: #888; margin-top: 5px; }
+  .cta { text-align: center; margin: 30px 0; }
+  .cta-button { display: inline-block; background: #00ff88; color: #0a0a0f; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; }
+  .footer { background: #0d0d12; padding: 20px 30px; text-align: center; color: #555; font-size: 12px; }
+  .footer a { color: #00ff88; text-decoration: none; }
+  .ps { margin-top: 25px; padding-top: 20px; border-top: 1px solid #222; font-size: 13px; color: #666; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">AgentFlow</div>
+    <div class="tagline">AI agents that work while you don't</div>
+  </div>
+  
+  <div class="content">
+    <div class="greeting">Hey {{first_name}},</div>
+    
+    <div class="body-text">
+      I came across <span class="highlight">{{business_name}}</span> and noticed something — 
+      your customers are reaching out at all hours, but response times tell a different story.
+    </div>
+    
+    <div class="stat-box">
+      <div class="stat-number">78%</div>
+      <div class="stat-text">of customers buy from the first business that responds.<br>Not the best. Not the cheapest. The first.</div>
+    </div>
+    
+    <div class="body-text">
+      Most businesses lose <span class="highlight">10-20 hours per week</span> answering the same questions, 
+      chasing leads that go cold, and missing opportunities while they sleep.
+    </div>
+    
+    <div class="body-text" style="margin-top: 20px;">
+      We build AI agents that handle your customer conversations 24/7 — 
+      so your team can focus on closing deals instead of answering "what are your hours?" for the 100th time.
+    </div>
+    
+    <div class="body-text" style="margin-top: 20px;">
+      <strong>What this looks like in practice:</strong>
+      <ul style="padding-left: 20px; margin: 10px 0;">
+        <li>Customers get instant answers — even at 2am</li>
+        <li>Your team stops doing repetitive work</li>
+        <li>Leads get followed up automatically</li>
+        <li>You see exactly what's working (and what isn't)</li>
+      </ul>
+    </div>
+    
+    <div class="cta">
+      <a href="https://agentflow-team.github.io/agentflow/" class="cta-button">See how it works →</a>
+    </div>
+    
+    <div class="body-text">
+      No pressure — just wanted to share this because I genuinely think it could help {{business_name}} 
+      capture more of the leads you're already getting.
+    </div>
+    
+    <div class="body-text" style="margin-top: 20px;">
+      Happy to chat for 15 min if you're curious.<br><br>
+      Cheers,<br>
+      <strong style="color: #fff;">Kabir</strong>
+    </div>
+    
+    <div class="ps">
+      P.S. — I put together a free guide on how SMBs are using AI to save 15+ hours/week. 
+      Want me to send it over?
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div>AgentFlow — AI agents for modern businesses</div>
+    <div style="margin-top: 8px;">
+      <a href="https://agentflow-team.github.io/agentflow/">Website</a> · 
+      <a href="{{unsubscribe_url}}">Unsubscribe</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

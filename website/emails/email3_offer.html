@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+  .container { max-width: 600px; margin: 0 auto; background: #0a0a0f; border-radius: 12px; overflow: hidden; }
+  .header { background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); padding: 30px; text-align: center; }
+  .logo { color: #00ff88; font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+  .content { padding: 30px; color: #e0e0e0; }
+  .greeting { font-size: 18px; color: #fff; margin-bottom: 20px; }
+  .body-text { font-size: 15px; line-height: 1.7; color: #ccc; }
+  .highlight { color: #00ff88; font-weight: bold; }
+  .pricing-card { background: #1a1a2e; border-radius: 8px; padding: 25px; margin: 20px 0; border: 1px solid #333; }
+  .pricing-header { color: #fff; font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+  .pricing-price { color: #00ff88; font-size: 28px; font-weight: bold; margin: 10px 0; }
+  .pricing-detail { color: #888; font-size: 13px; }
+  .pricing-features { list-style: none; padding: 0; margin: 15px 0; }
+  .pricing-features li { padding: 5px 0; color: #ccc; font-size: 14px; }
+  .pricing-features li::before { content: "✅ "; }
+  .cta { text-align: center; margin: 30px 0; }
+  .cta-button { display: inline-block; background: #00ff88; color: #0a0a0f; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; }
+  .cta-secondary { display: inline-block; color: #00ff88; padding: 10px 20px; text-decoration: none; font-size: 14px; margin-top: 10px; }
+  .footer { background: #0d0d12; padding: 20px 30px; text-align: center; color: #555; font-size: 12px; }
+  .footer a { color: #00ff88; text-decoration: none; }
+  .urgency { background: #2a1a0a; border-left: 3px solid #ff8800; padding: 12px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; color: #ff8800; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">AgentFlow</div>
+  </div>
+  
+  <div class="content">
+    <div class="greeting">Hey {{first_name}},</div>
+    
+    <div class="body-text">
+      Last email from me — wanted to be upfront about what we offer and whether it makes sense for {{business_name}}.
+    </div>
+    
+    <div class="body-text" style="margin-top: 15px;">
+      We have two packages designed specifically for businesses with 5-50 employees:
+    </div>
+    
+    <div class="pricing-card">
+      <div class="pricing-header">Starter</div>
+      <div class="pricing-price">$499 setup + $99/mo</div>
+      <div class="pricing-detail">Perfect for getting started</div>
+      <ul class="pricing-features">
+        <li>1 AI agent automation (e.g., customer chat, lead capture)</li>
+        <li>Basic workflow setup</li>
+        <li>Email support</li>
+        <li>5 hours/month optimization</li>
+      </ul>
+    </div>
+    
+    <div class="pricing-card" style="border-color: #00ff88;">
+      <div class="pricing-header">Pro <span style="color: #00ff88; font-size: 12px;">★ MOST POPULAR</span></div>
+      <div class="pricing-price">$999 setup + $249/mo</div>
+      <div class="pricing-detail">For businesses ready to scale</div>
+      <ul class="pricing-features">
+        <li>3 AI agent automations</li>
+        <li>Advanced integrations (CRM, phone, calendar)</li>
+        <li>Priority support</li>
+        <li>15 hours/month optimization</li>
+        <li>Monthly performance report</li>
+      </ul>
+    </div>
+    
+    <div class="body-text">
+      Both include: setup, training, integration with your existing tools, and ongoing optimization. 
+      Most clients see ROI within <span class="highlight">30 days</span>.
+    </div>
+    
+    <div class="urgency">
+      ⚡ We only take on 5 new clients per month to ensure quality. 
+      Currently have 2 spots open for April.
+    </div>
+    
+    <div class="cta">
+      <a href="https://agentflow-team.github.io/agentflow/" class="cta-button">Book a free 15-min assessment →</a>
+      <br>
+      <a href="mailto:kabir@agentflow.ai?subject=Quick question about AgentFlow" class="cta-secondary">Or just reply to this email</a>
+    </div>
+    
+    <div class="body-text" style="margin-top: 20px; color: #888; font-size: 13px;">
+      If this isn't the right time, no worries at all. I won't email again.<br>
+      But if something clicks — even a little — let's chat for 15 minutes.<br><br>
+      Thanks for reading,<br>
+      <strong style="color: #fff;">Kabir</strong>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div>AgentFlow — AI agents for modern businesses</div>
+    <div style="margin-top: 8px;">
+      <a href="https://agentflow-team.github.io/agentflow/">Website</a> · 
+      <a href="{{unsubscribe_url}}">Unsubscribe</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

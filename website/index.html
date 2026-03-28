@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentFlow - AI Automation for Business | From $999 Setup</title>
+    <meta name="description" content="AI agents that work 24/7 to sell, support, and grow your business. Setup in 24-48h.">
+    <meta property="og:title" content="AgentFlow - AI Automation for Business">
+    <meta property="og:description" content="AI agents that work 24/7 to sell, support, and grow your business. Setup in 24-48h.">
+    <meta property="og:image" content="https://agentflow-team.github.io/agentflow/preview.png">
+    <meta property="og:url" content="https://agentflow-team.github.io/agentflow/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgentFlow - AI Automation for Business">
+    <meta name="twitter:description" content="AI agents that work 24/7 to sell, support, and grow your business. Setup in 24-48h.">
+    <meta name="twitter:image" content="https://agentflow-team.github.io/agentflow/preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{font-family:'Inter',sans-serif;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{background:#050508;color:#fff;overflow-x:hidden;}
+        #tsparticles{position:fixed;inset:0;z-index:0;pointer-events:none;}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+        @keyframes glow{0%,100%{box-shadow:0 0 30px rgba(0,255,136,.35)}50%{box-shadow:0 0 70px rgba(0,255,136,.7)}}
+        @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes scanline{0%{top:-100%}100%{top:200%}}
+        @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+        @keyframes badge-bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+        @keyframes countdown-tick{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.92)}}
+        .gradient-text{background:linear-gradient(135deg,#00ff88 0%,#00e5ff 50%,#a855f7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .gradient-text-gold{background:linear-gradient(135deg,#f59e0b,#fbbf24,#f59e0b);background-size:200% auto;animation:shimmer 3s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .glass{background:rgba(255,255,255,0.03);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.07);}
+        .glass-green{background:rgba(0,255,136,0.04);backdrop-filter:blur(24px);border:1px solid rgba(0,255,136,0.15);}
+        .cta-btn{background:linear-gradient(135deg,#00ff88,#00d4aa);color:#000;font-weight:800;transition:all 0.3s ease;animation:glow 2.5s ease-in-out infinite;position:relative;overflow:hidden;}
+        .cta-btn::after{content:'';position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:rgba(255,255,255,0.25);transform:skewX(-20deg);animation:scanline 3s linear infinite;}
+        .cta-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 50px rgba(0,255,136,0.5);}
+        .cta-btn-secondary{border:2px solid rgba(0,255,136,0.5);color:#00ff88;transition:all 0.3s;}
+        .cta-btn-secondary:hover{background:rgba(0,255,136,0.1);border-color:#00ff88;transform:translateY(-2px);}
+        .feature-card{transition:all 0.35s ease;}
+        .feature-card:hover{transform:translateY(-6px);border-color:rgba(0,255,136,0.4)!important;box-shadow:0 24px 48px rgba(0,255,136,0.08);}
+        .countdown-digit{background:linear-gradient(180deg,#0f1117,#1a1d2e);border:1px solid rgba(0,255,136,0.2);border-radius:12px;padding:10px 14px;font-size:2.5rem;font-weight:900;font-variant-numeric:tabular-nums;min-width:72px;text-align:center;animation:countdown-tick 1s ease-in-out infinite;color:#00ff88;}
+        .price-strike{text-decoration:line-through;color:#555;}
+        .testimonial-card{transition:all 0.3s ease;border-left:3px solid #00ff88;}
+        .testimonial-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.4);}
+        .acc-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+        .acc-item.open .acc-content{max-height:400px;}
+        .acc-item.open .acc-arrow{transform:rotate(45deg);color:#00ff88;}
+        .acc-arrow{transition:transform 0.3s;display:inline-block;}
+        .value-item{border-left:3px solid #00ff88;}
+        #navbar{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:all 0.3s;}
+        #navbar.scrolled{background:rgba(5,5,8,0.95);border-bottom:1px solid rgba(0,255,136,0.15);}
+        .stars{color:#fbbf24;letter-spacing:2px;}
+        #urgency-bar{animation:glow 2s ease infinite;}
+        .badge-live{animation:badge-bounce 2s ease infinite;}
+        .guarantee-ring{border:4px solid #00ff88;border-radius:50%;padding:24px;display:inline-block;animation:glow 3s ease-in-out infinite;}
+        .scarcity-bar{background:linear-gradient(90deg,#00ff88,#00d4aa);height:8px;border-radius:999px;transition:width 0.5s ease;}
+        @media(max-width:640px){.countdown-digit{font-size:1.8rem;min-width:56px;padding:8px 10px;}}
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- PARTICLES -->
+    <div id="tsparticles"></div>
+
+    <!-- URGENCY BAR -->
+    <div id="urgency-bar" class="fixed top-0 w-full z-[100] bg-black border-b border-green-500/30 py-2 px-4 text-center text-sm">
+        <span class="text-yellow-400 font-bold badge-live">🔥 FOUNDER DEAL:</span>
+        <span class="text-white"> Only <span id="spots-left" class="text-green-400 font-bold">7</span> founder spots left — </span>
+        <span id="countdown-inline" class="text-green-400 font-bold font-mono"></span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-9 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-black gradient-text tracking-tight">⚡ AgentFlow <span class="text-xs text-gray-500 font-normal">by OpenClaw</span></div>
+            <div class="hidden md:flex gap-8 text-sm text-gray-400">
+                <a href="#features" class="hover:text-white transition">How it Works</a>
+                <a href="#results" class="hover:text-white transition">Results</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+            <a href="#contact" class="cta-btn px-5 py-2 rounded-lg text-sm hidden md:block">Get Started →</a>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-44 pb-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent pointer-events-none"></div>
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-green-400 text-sm mb-8" data-aos="fade-down">
+                <span class="badge-live">🚀</span>
+                <span>Powered by OpenClaw — The Future of AI</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                Hire Your AI Team<br>
+                <span class="gradient-text">starting at $999</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Stop doing repetitive tasks. Your AI agents work
+                <span id="typed-hero" class="text-green-400 font-semibold"></span>
+            </p>
+            <p class="text-gray-500 mb-8" data-aos="fade-up" data-aos-delay="250">
+                <span class="stars">★★★★★</span> <span class="text-gray-400">Over 50 businesses already automate with AgentFlow</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="cta-btn px-10 py-5 rounded-xl font-bold text-black text-lg">
+                    ⚡ Get My AI Agent Now
+                </a>
+                <a href="#features" class="cta-btn-secondary px-10 py-5 rounded-xl font-semibold text-lg">
+                    See How It Works
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm" data-aos="fade-up" data-aos-delay="350">
+                🔒 No credit card for the trial • Cancel anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-16 px-6 border-y border-gray-800/50" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-black gradient-text"><span id="stat1">0</span>+</div>
+                    <div class="text-gray-500 text-sm mt-1">Active businesses</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black gradient-text"><span id="stat2">0</span>%</div>
+                    <div class="text-gray-500 text-sm mt-1">Cheaper than competitors</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black gradient-text"><span id="stat3">0</span>/7</div>
+                    <div class="text-gray-500 text-sm mt-1">Guaranteed availability</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black gradient-text"><span id="stat4">0</span>h</div>
+                    <div class="text-gray-500 text-sm mt-1">Setup included</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">What Your AI Agent Can Do</h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Powered by OpenClaw's advanced automation engine</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold mb-2">Sales Agent</h3>
+                    <p class="text-gray-400 text-sm">Qualifies leads, handles objections, schedules demos, and closes deals — while you sleep. Like having a $10K/mo sales team — at a fraction of the cost.</p>
+                </div>
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+                    <p class="text-gray-400 text-sm">Instant responses to your customers. Never miss a support ticket. Multilingual support included out of the box.</p>
+                </div>
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-bold mb-2">Email Agent</h3>
+                    <p class="text-gray-400 text-sm">Replies, classifies, and manages your inbox automatically. Follow-up sequences that convert cold leads into customers.</p>
+                </div>
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-2">Social Media</h3>
+                    <p class="text-gray-400 text-sm">Publish content, reply to comments and DMs. Keep your presence active without touching your phone.</p>
+                </div>
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-2">AI Analytics</h3>
+                    <p class="text-gray-400 text-sm">Automatic reports on key metrics. Know exactly what works and what doesn't — without checking dashboards.</p>
+                </div>
+                <div class="feature-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold mb-2">Custom Agent</h3>
+                    <p class="text-gray-400 text-sm">Have a specific process? We'll automate it. Integration with your existing tools in 24-48h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-24 px-6 bg-black/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get Started in 3 Steps</h2>
+            <div class="space-y-6">
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="0">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Choose Your Agent Type</h3>
+                        <p class="text-gray-400">Sales, Support, Email, Social Media — or combine multiple agents for maximum automation.</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="150">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">We Configure It with OpenClaw</h3>
+                        <p class="text-gray-400">Your custom agent ready in 24-48h with knowledge of your business, products, and processes.</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl flex gap-6 items-center" data-aos="fade-right" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Start Earning More</h3>
+                        <p class="text-gray-400">Watch your AI agent close sales, support customers, and grow your business — 24/7, 365 days a year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="results" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">What Our Clients Say</h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Real results from real businesses</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stars text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 text-sm mb-6">"Our sales agent closed 3 clients the first weekend, without me touching the phone. The ROI was immediate."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-black font-bold text-sm">MR</div>
+                        <div>
+                            <div class="font-semibold text-sm">María R.</div>
+                            <div class="text-gray-500 text-xs">Fashion E-commerce</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="150">
+                    <div class="stars text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 text-sm mb-6">"24/7 support reduced our complaints by 73%. Customers are happy and I don't have to be available at 2am."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">JL</div>
+                        <div>
+                            <div class="font-semibold text-sm">Jorge L.</div>
+                            <div class="text-gray-500 text-xs">SaaS B2B</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stars text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 text-sm mb-6">"I went from answering 200 emails a day to zero. The agent does it all. Now I have time for what matters: growing the business."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-black font-bold text-sm">AM</div>
+                        <div>
+                            <div class="font-semibold text-sm">Ana M.</div>
+                            <div class="text-gray-500 text-xs">Marketing Agency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE STACK -->
+    <section class="py-16 px-6 bg-black/40">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why Choose AgentFlow?</h2>
+            <div class="space-y-4">
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="0">
+                    <div class="text-3xl">💰</div>
+                    <div><h3 class="font-bold text-lg">80% Cheaper</h3><p class="text-gray-400 text-sm">Why pay $500+/mo for basic bots? We deliver more for less.</p></div>
+                </div>
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="100">
+                    <div class="text-3xl">🧠</div>
+                    <div><h3 class="font-bold text-lg">Truly Intelligent AI</h3><p class="text-gray-400 text-sm">OpenClaw uses advanced models that understand context and close sales.</p></div>
+                </div>
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-3xl">🔄</div>
+                    <div><h3 class="font-bold text-lg">Always Improving</h3><p class="text-gray-400 text-sm">Your agents learn with every conversation. More use = better results.</p></div>
+                </div>
+                <div class="value-item glass rounded-xl p-6 flex gap-4 items-center" data-aos="fade-left" data-aos-delay="300">
+                    <div class="text-3xl">🔒</div>
+                    <div><h3 class="font-bold text-lg">30-Day Guarantee</h3><p class="text-gray-400 text-sm">If you're not satisfied within 30 days, we'll refund your money. No questions asked.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DIGITAL PRODUCTS -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">📚 AI Automation Resources</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Start learning how AI agents can transform your business — before committing to a plan.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Free Lead Magnet -->
+                <div class="glass-green rounded-3xl p-10 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-sm mb-6">
+                        <span>🎁</span>
+                        <span>100% Free</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">AI Automation Starter Kit</h3>
+                    <p class="text-gray-400 mb-6">Download our free PDF guide and discover how AI agents can sell, support, and grow your business on autopilot.</p>
+                    <ul class="text-left text-gray-400 text-sm space-y-2 mb-8">
+                        <li>✅ What AI agents can do for your business</li>
+                        <li>✅ Top 5 automations by industry</li>
+                        <li>✅ Real ROI examples and case studies</li>
+                        <li>✅ Getting started checklist</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn block text-center px-10 py-4 rounded-xl font-bold text-black text-lg">
+                        📥 Download Free PDF
+                    </a>
+                </div>
+                <!-- MVP Guide -->
+                <div class="glass-green rounded-3xl p-10 text-center border-2 border-green-500 relative" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-cyan-500 text-black px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+                        ⭐ BEST VALUE
+                    </div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-sm mb-6">
+                        <span>🚀</span>
+                        <span>Implementation Guide</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">AI Agent MVP Playbook</h3>
+                    <p class="text-gray-400 mb-6">The step-by-step playbook to build and deploy your first AI agent. Includes templates, prompts, and automation scripts.</p>
+                    <div class="text-5xl font-black gradient-text mb-6">$10</div>
+                    <ul class="text-left text-gray-400 text-sm space-y-2 mb-8">
+                        <li>✅ Everything in the Starter Kit</li>
+                        <li>✅ 30+ page implementation playbook</li>
+                        <li>✅ Ready-to-use agent prompt templates</li>
+                        <li>✅ Automation workflow blueprints</li>
+                        <li>✅ ROI calculator spreadsheet</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn block text-center px-10 py-4 rounded-xl font-bold text-black text-lg">
+                        ⚡ Get the Playbook — $10
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Simple & Transparent Pricing</h2>
+                <p class="text-gray-400">No hidden fees. No surprises. Just results.</p>
+                <div class="mt-6 inline-flex items-center gap-3 glass px-6 py-3 rounded-full">
+                    <span class="text-yellow-400 font-bold">⚡ Founder deal:</span>
+                    <span class="text-gray-300 text-sm">Special founder pricing — limited to first 10 clients</span>
+                    <span class="bg-green-500 text-black text-xs font-bold px-2 py-1 rounded-full"><span id="spots-pricing">7</span> left</span>
+                </div>
+            </div>
+            <!-- Scarcity bar -->
+            <div class="max-w-md mx-auto mb-12" data-aos="fade-up">
+                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                    <span>3 of 10 spots taken</span>
+                    <span class="text-green-400 font-bold">7 left</span>
+                </div>
+                <div class="bg-gray-800 rounded-full h-2">
+                    <div class="scarcity-bar" style="width:30%"></div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 relative">
+                <!-- Starter -->
+                <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-xl font-bold mb-2">Starter</h3>
+                    <p class="text-gray-500 text-sm mb-4">Get your first AI agent live</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold gradient-text">$999</span>
+                        <span class="text-gray-400 text-sm"> setup</span>
+                        <div class="mt-1">
+                            <span class="text-2xl font-bold text-white">$297</span>
+                            <span class="text-gray-400">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-8">
+                        <li>✅ 1 AI Agent (Sales, Support, or Email)</li>
+                        <li>✅ Custom workflow setup</li>
+                        <li>✅ 5 hours/mo optimization</li>
+                        <li>✅ Email support</li>
+                        <li>✅ Live in 24-48 hours</li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 rounded-xl border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition font-bold">
+                        Get Started
+                    </a>
+                </div>
+                <!-- Pro -->
+                <div class="glass rounded-3xl p-8 border-2 border-green-500 relative transform scale-105 z-10" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-cyan-500 text-black px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+                        ⭐ MOST POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pro</h3>
+                    <p class="text-gray-500 text-sm mb-4">Scale with multiple agents</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold gradient-text">$2,499</span>
+                        <span class="text-gray-400 text-sm"> setup</span>
+                        <div class="mt-1">
+                            <span class="text-2xl font-bold text-white">$497</span>
+                            <span class="text-gray-400">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-8">
+                        <li>✅ 3 AI Agent automations</li>
+                        <li>✅ Advanced integrations (CRM, Slack)</li>
+                        <li>✅ 15 hours/mo optimization</li>
+                        <li>✅ Priority support</li>
+                        <li>✅ Monthly strategy call</li>
+                        <li>✅ Live in 24-48 hours</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn block text-center py-4 rounded-xl font-bold text-black text-lg">
+                        Get Pro Now
+                    </a>
+                </div>
+                <!-- Agency -->
+                <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-gray-500 text-sm mb-4">Full-scale AI transformation</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold gradient-text">$5,000+</span>
+                        <span class="text-gray-400 text-sm"> setup</span>
+                        <div class="mt-1">
+                            <span class="text-2xl font-bold text-white">Custom</span>
+                            <span class="text-gray-400">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-8">
+                        <li>✅ Unlimited AI automations</li>
+                        <li>✅ Custom development</li>
+                        <li>✅ Dedicated account manager</li>
+                        <li>✅ 24/7 monitoring & support</li>
+                        <li>✅ Quarterly business reviews</li>
+                        <li>✅ SLA guarantee</li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 rounded-xl border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition font-bold">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="py-16 px-6 text-center" data-aos="zoom-in">
+        <div class="max-w-lg mx-auto">
+            <div class="guarantee-ring inline-block mb-6">
+                <div class="text-5xl">🛡️</div>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">30-Day Risk-Free Guarantee</h2>
+            <p class="text-gray-400">If within 30 days you're not completely satisfied with your AI agent's results, we'll refund 100% of your money. No questions, no hassle.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 px-6 bg-black/30">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">❓ Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                    <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
+                        <span class="font-semibold">What is OpenClaw?</span>
+                        <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
+                    </button>
+                    <div class="acc-content px-6 pb-6 text-gray-400 text-sm">
+                        OpenClaw is a next-generation AI automation platform that powers intelligent agents. It's what makes our agents much smarter than basic chatbots. It uses advanced AI models that understand context and can take real actions.
+                    </div>
+                </div>
+                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
+                        <span class="font-semibold">How long does setup take?</span>
+                        <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
+                    </button>
+                    <div class="acc-content px-6 pb-6 text-gray-400 text-sm">
+                        Typically 24-48 hours. We configure your agent with your business knowledge and integrate it with your existing tools. You'll be up and running in less than 2 days.
+                    </div>
+                </div>
+                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
+                        <span class="font-semibold">Can I cancel anytime?</span>
+                        <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
+                    </button>
+                    <div class="acc-content px-6 pb-6 text-gray-400 text-sm">
+                        Yes! No long-term contracts. Cancel anytime with 1 click. But we think you'll love it — 95% of our customers continue after day 30.
+                    </div>
+                </div>
+                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
+                        <span class="font-semibold">What integrations are available?</span>
+                        <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
+                    </button>
+                    <div class="acc-content px-6 pb-6 text-gray-400 text-sm">
+                        Stripe, Slack, WhatsApp, Telegram, Email (Gmail, Outlook), CRM (HubSpot, Salesforce), Calendar (Google, Cal.com) and 50+ more. Ask us if you need something specific!
+                    </div>
+                </div>
+                <div class="acc-item glass rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button class="w-full p-6 text-left flex justify-between items-center acc-trigger">
+                        <span class="font-semibold">Do I need technical knowledge?</span>
+                        <span class="acc-arrow text-green-400 text-xl font-bold">+</span>
+                    </button>
+                    <div class="acc-content px-6 pb-6 text-gray-400 text-sm">
+                        No! We handle all the technical side. Just tell us what you want your agent to do and we'll make it happen. Zero technical knowledge required.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-2xl mx-auto">
+            <div class="glass-green rounded-3xl p-10" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-center mb-2">🚀 Get Started Today</h2>
+                <p class="text-center text-gray-400 mb-8">Tell us about your business and we'll contact you in less than 2 hours</p>
+                <form id="contactForm" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input name="name" type="text" placeholder="Your name" required class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition"/>
+                        <input name="email" type="email" placeholder="Your email" required class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition"/>
+                    </div>
+                    <input name="business" type="text" placeholder="What does your business do?" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition"/>
+                    <select name="plan" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition text-gray-300">
+                        <option value="">Which plan are you interested in?</option>
+                        <option value="starter">Starter — $999 setup + $297/mo</option>
+                        <option value="pro">Pro — $2,499 setup + $497/mo ⭐ Most popular</option>
+                        <option value="enterprise">Enterprise — $5,000+ setup</option>
+                        <option value="demo">I just want to see a demo</option>
+                    </select>
+                    <textarea name="message" placeholder="Tell us about your business — what processes do you want to automate? What are your biggest pain points?" rows="4" class="w-full px-4 py-4 rounded-xl bg-black/50 border border-gray-700 focus:border-green-500 outline-none transition resize-none"></textarea>
+                    <button type="submit" class="cta-btn w-full py-5 rounded-xl font-bold text-black text-lg">
+                        ⚡ I Want My AI Agent Now
+                    </button>
+                </form>
+                <p class="text-center text-gray-500 text-sm mt-6">⚡ We respond in less than 2 hours • No commitment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 px-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-400">⚡ 2026 AgentFlow — Powered by OpenClaw</div>
+            <div class="flex gap-6 text-gray-400 text-sm">
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

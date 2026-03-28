@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+  .container { max-width: 600px; margin: 0 auto; background: #0a0a0f; border-radius: 12px; overflow: hidden; }
+  .header { background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); padding: 30px; text-align: center; }
+  .logo { color: #00ff88; font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+  .content { padding: 30px; color: #e0e0e0; }
+  .greeting { font-size: 18px; color: #fff; margin-bottom: 20px; }
+  .body-text { font-size: 15px; line-height: 1.7; color: #ccc; }
+  .highlight { color: #00ff88; font-weight: bold; }
+  .case-study { background: #1a1a2e; border-radius: 8px; padding: 25px; margin: 20px 0; }
+  .case-title { color: #fff; font-size: 16px; font-weight: bold; margin-bottom: 15px; }
+  .case-stat { display: inline-block; margin-right: 25px; margin-bottom: 10px; }
+  .case-stat-num { font-size: 24px; font-weight: bold; color: #00ff88; }
+  .case-stat-label { font-size: 12px; color: #888; }
+  .quote { border-left: 3px solid #00ff88; padding-left: 15px; margin: 20px 0; font-style: italic; color: #aaa; }
+  .cta { text-align: center; margin: 30px 0; }
+  .cta-button { display: inline-block; background: #00ff88; color: #0a0a0f; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; }
+  .footer { background: #0d0d12; padding: 20px 30px; text-align: center; color: #555; font-size: 12px; }
+  .footer a { color: #00ff88; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">AgentFlow</div>
+  </div>
+  
+  <div class="content">
+    <div class="greeting">Hey {{first_name}},</div>
+    
+    <div class="body-text">
+      Quick follow-up — wanted to share what happened when a business like <span class="highlight">{{business_name}}</span> 
+      tried AI automation.
+    </div>
+    
+    <div class="case-study">
+      <div class="case-title">🏠 Home Services Company — Austin, TX (12 employees)</div>
+      <div>
+        <div class="case-stat">
+          <div class="case-stat-num">37%</div>
+          <div class="case-stat-label">more leads captured</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-num">15hrs</div>
+          <div class="case-stat-label">saved per week</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-num">3hrs→15min</div>
+          <div class="case-stat-label">response time</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="quote">
+      "We were missing 30-40% of calls during busy hours. Now every call gets answered, 
+      every lead gets followed up, and my team focuses on actual work instead of playing phone tag."
+      <br>— Owner, HVAC company
+    </div>
+    
+    <div class="body-text">
+      The setup took <span class="highlight">less than a week</span>. No technical expertise needed on their end. 
+      We handled everything — from connecting their phone system to training the AI on their specific services.
+    </div>
+    
+    <div class="body-text" style="margin-top: 15px;">
+      The ROI was clear within the first month: they recovered more in missed leads than the entire year of service cost.
+    </div>
+    
+    <div class="cta">
+      <a href="https://agentflow-team.github.io/agentflow/" class="cta-button">Read more case studies →</a>
+    </div>
+    
+    <div class="body-text" style="margin-top: 20px;">
+      If this sounds like something that could work for {{business_name}}, I'm happy to do a quick 
+      15-min assessment — no commitment, just see if it makes sense.<br><br>
+      Best,<br>
+      <strong style="color: #fff;">Kabir</strong>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div>AgentFlow — AI agents for modern businesses</div>
+    <div style="margin-top: 8px;">
+      <a href="https://agentflow-team.github.io/agentflow/">Website</a> · 
+      <a href="{{unsubscribe_url}}">Unsubscribe</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
