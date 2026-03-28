@@ -1,0 +1,40 @@
+# ⚠️ SECRETS — NEVER commit these
+.env
+.env.*
+*.env
+config.json
+config.local.json
+
+# Files with credential references or infrastructure paths
+flow_simple.py
+telegram_bot.py
+buffer_introspect.py
+check_agentmail.py
+check_batch3.py
+check_batch3_detail.py
+check_batch4.py
+check_log.py
+check_status.py
+check_channels.py
+outreach_pipeline.py
+post_to_x.py
+
+# Logs and runtime data
+*.log
+flow.log
+outreach_log.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
